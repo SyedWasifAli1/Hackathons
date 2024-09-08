@@ -1,0 +1,200 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #009688;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.profile-header {
+    max-width: 60%;
+}
+
+.profile-header h1 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+.profile-header h2 {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+.contact-details p {
+    margin: 5px 0;
+}
+
+.profile-picture img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid white;
+}
+
+/* Skills Section */
+.skills {
+    background-color: white;
+    padding: 30px;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+}
+
+.skill p {
+    font-size: 1.2em;
+    margin: 0;
+}
+
+.progress-bar {
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 10px;
+    margin-top: 5px;
+}
+
+.progress {
+    background-color: #009688;
+    height: 100%;
+    border-radius: 10px;
+}
+
+/* Education Section */
+.education {
+    background-color: white;
+    padding: 30px;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.education-item h3 {
+    margin: 0;
+    font-size: 1.2em;
+    color: #009688;
+}
+
+.education-item p {
+    margin: 5px 0;
+    color: #555;
+}
+#skills {
+    display: block; /* Initially visible */
+    transition: all 0.5s ease;
+}
+/* Center the button */
+#toggle-skills {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    background-color: #009688; /* Button background color */
+    color: white; /* Button text color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin: 20px auto;
+    display: block; /* To center horizontally */
+  }
+  
+
+  
+  /* Hover effect */
+  #toggle-skills:hover {
+    background-color: #00796B; /* Change background on hover */
+    transform: scale(1.05); /* Slightly enlarge the button */
+  }
+  
+  /* Active state (when clicking) */
+  #toggle-skills:active {
+    background-color: #004D40; /* Even darker background when clicking */
+    transform: scale(0.95); /* Slightly reduce size on click for feedback */
+  }
+  
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    header {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px;
+    }
+
+    .profile-header h1 {
+        font-size: 2em;
+    }
+
+    .profile-header h2 {
+        font-size: 1.2em;
+    }
+
+    .contact-details p {
+        font-size: 0.9em;
+    }
+
+    .profile-header {
+        max-width: 100%;
+    }
+
+    .skills-container {
+        grid-template-columns: 1fr;
+    }
+
+    .skills {
+        padding: 20px;
+        margin: 10px 0;
+    }
+
+    .education {
+        padding: 20px;
+    }
+}
+
+/* Larger Desktop Screens */
+@media (min-width: 1024px) {
+    .profile-header h1 {
+        font-size: 3em;
+    }
+
+    .profile-header h2 {
+        font-size: 1.7em;
+    }
+
+    .skills-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .profile-picture img {
+        width: 180px;
+        height: 180px;
+    }
+
+    .skills, .education {
+        padding: 40px;
+        margin: 30px 0;
+    }
+}
